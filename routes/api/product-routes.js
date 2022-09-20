@@ -19,7 +19,6 @@ router.get('/', async (req, res) => {
 
 });
 
-// include its associated Category
 
 router.get('/:id', async (req, res) => {
   try {
@@ -40,7 +39,7 @@ router.get('/:id', async (req, res) => {
 });
 
 
-
+// TODO NOT WORKING
 // create new product
 router.post('/', (req, res) => {
   /* req.body should look like this...
@@ -69,7 +68,7 @@ router.post('/', (req, res) => {
     .then((productTagIds) => res.status(200).json(productTagIds))
     .catch((err) => {
       console.log(err);
-      res.status(400).json(err);
+      res.status(400).json(err.message);
     });
 });
 
