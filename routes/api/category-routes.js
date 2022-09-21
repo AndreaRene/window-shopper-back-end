@@ -3,6 +3,7 @@ const { Category, Product, ProductTag, Tag } = require('../../models');
 
 // The `/api/categories` endpoint
 
+// view all categories
 router.get('/', async (req, res) => {
   try {
     const categories = await Category.findAll({
