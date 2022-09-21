@@ -39,7 +39,7 @@ router.get('/:id', async (req, res) => {
 });
 
 
-// TODO NOT WORKING
+
 // create new product
 router.post('/', (req, res) => {
   Product.create(req.body)
@@ -62,7 +62,6 @@ router.post('/', (req, res) => {
     });
 });
 
-// TODO NOT WORKING
 // update product
 router.put('/:id', (req, res) => {
   // update product data
